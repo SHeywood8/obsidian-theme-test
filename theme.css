@@ -8,6 +8,27 @@ body {
 	--toggle-radius: 0px;
 	--toggle-thumb-radius: 0px;
 	--slider-thumb-radius: 0px;
+
+	--font-text-theme: "Fira Code", "Fira Code Medium", "Source Code Pro", monospace;
+	--font-monospace: var(--font-text-theme);
+	--font-interface: var(--font-text-theme);
+
+	--hr-thickness: 4px;
+
+	--link-color: #55aaff;
+	--link-unresolved-color: grey;
+
+	--collapse-icon-color: var(--mono-100);
+	--collapse-icon-color-collapsed: var(--mono-100);
+}
+
+hr {
+	margin: 1rem 0;
+}
+
+h6 {
+	margin-block-end: 0;
+	margin-block-start: 0;
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
@@ -31,4 +52,59 @@ svg * {
 
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+.theme-dark {
+  --background-primary: black;
+  --background-secondary: #030303;
+  --divider-color: white;
+  --text-normal: white;
+  --blockquote-background-color: #111111;
+  --blockquote-border-color: grey;
+  --hr-color: white;
+}
+
+.theme-dark mark {
+	--text-normal: black;
+	--highlight-background: white;
+}
+
+.theme-light {
+  --background-primary: white;
+  --background-secondary: #fcfcfc;
+  --divider-color: black;
+  --text-normal: black;
+  --blockquote-background-color: #eeeeee;
+  --blockquote-border-color: grey;
+  --hr-color: black;
+}
+
+.theme-light mark {
+	--text-normal: white;
+	--highlight-background: black;
+}
+
+.callout[data-callout="org-note"] {
+    --callout-color: white;
+    --callout-icon: lucide-file-text;
+}
+
+.callout[data-callout="org-info"] {
+    --callout-color: white;
+    --callout-icon: lucide-info;
+}
+
+.callout[data-callout="admin-note"] {
+    --callout-color: orange;
+    --callout-icon: lucide-file-text;
+}
+
+.callout[data-callout="admin-urgent"] {
+    --callout-color: #ff6600;
+    --callout-icon: lucide-file-exclamation-point;
+}
+
+.callout[data-callout="report-update"] {
+    --callout-color: white;
+    --callout-icon: lucide-file-plus-corner;
 }
